@@ -32,7 +32,7 @@ script:
   - $CXX --version
   - g++ --version
   - qmake -project
-  - echo 'CONFIG += c++11' >> Qt5HelloWorld.pro
+  # - echo 'CONFIG += c++11' >> Qt5HelloWorld.pro
   # - echo 'CXXFLAGS += c++11' >> Qt5HelloWorld.pro
   - qmake Qt5HelloWorld.pro
   - cat Qt5HelloWorld.pro
