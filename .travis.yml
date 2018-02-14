@@ -1,6 +1,6 @@
 # Config file for automatic testing at travis-ci.org
 language: cpp
-compiler: clang
+# compiler: clang
 before_install:
   - sudo apt-get update -qq
 install:
@@ -13,8 +13,7 @@ script:
   - $CXX --version
   - g++ --version
   - qmake -v
-  # - qmake -project "CONFIG += c++11" "DESTDIR = build" "QT += core gui widgets"
-  - qmake -project "CONFIG += c++11" "DESTDIR = build"
+  - mkdir build && cd build && qmake -project ..
   - qmake
   - cat Qt5HelloWorld.pro
   - cat Makefile
