@@ -1,5 +1,4 @@
 # Config file for automatic testing at travis-ci.org
-# sudo: required
 language: cpp
 compiler: clang
 before_install:
@@ -7,6 +6,9 @@ before_install:
 install:
   - sudo apt-get install -qq qt5-default qttools5-dev-tools
   - sudo apt-get install -qq qt5-qmake qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev
+before_script:
+  - QTDIR="/usr/lib/x86_64-linux-gnu/qt5"
+  - PATH="$QTDIR/bin:$PATH"
 script:
   - $CXX --version
   - g++ --version
