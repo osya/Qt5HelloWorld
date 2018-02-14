@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'qt5helloworld.ui'
 **
-** Created by: Qt User Interface Compiler version 5.6.0
+** Created by: Qt User Interface Compiler version 5.10.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -80,12 +80,12 @@ public:
 
     void retranslateUi(QMainWindow *Qt5HelloWorldClass)
     {
-        Qt5HelloWorldClass->setWindowTitle(QApplication::translate("Qt5HelloWorldClass", "Qt5HelloWorld", 0));
-        actionE_xit->setText(QApplication::translate("Qt5HelloWorldClass", "E&xit", 0));
-        actionAbout->setText(QApplication::translate("Qt5HelloWorldClass", "About", 0));
-        pushButton->setText(QApplication::translate("Qt5HelloWorldClass", "PushButton", 0));
-        menu_File->setTitle(QApplication::translate("Qt5HelloWorldClass", "&File", 0));
-        menuHelp->setTitle(QApplication::translate("Qt5HelloWorldClass", "Help", 0));
+        Qt5HelloWorldClass->setWindowTitle(QApplication::translate("Qt5HelloWorldClass", "Qt5HelloWorld", nullptr));
+        actionE_xit->setText(QApplication::translate("Qt5HelloWorldClass", "E&xit", nullptr));
+        actionAbout->setText(QApplication::translate("Qt5HelloWorldClass", "About", nullptr));
+        pushButton->setText(QApplication::translate("Qt5HelloWorldClass", "PushButton", nullptr));
+        menu_File->setTitle(QApplication::translate("Qt5HelloWorldClass", "&File", nullptr));
+        menuHelp->setTitle(QApplication::translate("Qt5HelloWorldClass", "Help", nullptr));
     } // retranslateUi
 
 };
