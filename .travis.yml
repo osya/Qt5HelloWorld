@@ -24,15 +24,13 @@ install:
   # - if [ "$CXX" = "g++" ]; then sudo apt-get install -qq g++-4.8; fi
   # - if [ "$CXX" = "g++" ]; then export CXX="g++-4.8"; fi
 
-before_script:
-#   QT_ENV_SCRIPT=$(find /opt -name 'qt*-env.sh')
-#   source $QT_ENV_SCRIPT
-  - cmake
+# before_script:
+#   - cmake
 script:
   - $CXX --version
   - g++ --version
   - qmake -qt=qt5 -v
-  - qmake -qt=qt5 -project "CONFIG += c++11" "QMAKE_CXXFLAGS_CXX11 += -std=c++11" "DESTDIR = build"
+  - qmake -qt=qt5 -project "CONFIG += c++11" "DESTDIR = build"
 
   # - qmake -qt=qt5 Qt5HelloWorld.pro
   - qmake -qt=qt5
