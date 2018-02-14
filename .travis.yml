@@ -13,7 +13,7 @@ script:
   - $CXX --version
   - g++ --version
   - qmake -v
-  - mkdir build && cd build && qmake -project ..
+  - mkdir build && cd build && qmake -project "CONFIG += c++11" ..
   - qmake
   - cat Qt5HelloWorld.pro
   - cat Makefile
