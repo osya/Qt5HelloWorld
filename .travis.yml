@@ -16,7 +16,7 @@ before_install:
   - sudo apt-get update -qq
 install:
   # - sudo apt-get install -qq qt5-default qttools5-dev-tools
-  - sudo apt-get install -qq g++-6 qt57-meta-full
+  # - sudo apt-get install -qq g++-6 qt57-meta-full
   - sudo apt-get install -qq qt5-qmake qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev libsqlite3-dev
   # - sudo apt-get install -qq qt5-dev-tools
   # - sudo apt-get -y install qt55[QTPACKAGE]
