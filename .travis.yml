@@ -14,6 +14,5 @@ install:
 before_script:
   - cmake
 script:
-  - qmake -project
   - qmake Qt5HelloWorld.pro
   - make
