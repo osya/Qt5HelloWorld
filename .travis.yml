@@ -5,9 +5,6 @@ before_install:
   - sudo apt-get update -qq
 install:
   - sudo apt-get install -qq qt5-default qttools5-dev-tools
-# before_script:
-#   - QTDIR="/usr/lib/x86_64-linux-gnu/qt5"
-#   - PATH="$QTDIR/bin:$PATH"
 script:
   - mkdir build && cd build && qmake -project "CONFIG += c++11" "QT += widgets" ..
   - qmake
