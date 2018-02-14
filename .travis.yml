@@ -21,6 +21,8 @@ script:
   # - make
   - $CXX --version
   - g++ --version
+  - cat Qt5HelloWorld.pro
   - qmake
+  - cat Qt5HelloWorld.pro
   - cat Makefile
   - make
