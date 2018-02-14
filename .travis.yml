@@ -32,12 +32,8 @@ script:
   - $CXX --version
   - g++ --version
   - qmake -qt=qt5 -v
-  - qmake -qt=qt5 -project
-  - echo 'CONFIG += c++11' >> Qt5HelloWorld.pro
-  # - echo 'QMAKE_CXXFLAGS += -std=c++11' >> Qt5HelloWorld.pro
-  - echo 'QMAKE_CXXFLAGS_CXX11 += -std=c++11' >> Qt5HelloWorld.pro
+  - qmake -qt=qt5 -project "CONFIG += c++11" "QMAKE_CXXFLAGS_CXX11 += -std=c++11" "TARGET = dist/Qt5HelloWorld"
 
-  # - echo 'CXXFLAGS += c++11' >> Qt5HelloWorld.pro
   # - qmake -qt=qt5 Qt5HelloWorld.pro
   - qmake -qt=qt5
   - cat Qt5HelloWorld.pro
