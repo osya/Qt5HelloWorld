@@ -1,31 +1,42 @@
 # Config file for automatic testing at travis-ci.org
 sudo: required
 language: cpp
-# before_install:
-  # - if [ "$CXX" == "g++" ]; then sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test; fi
+before_install:
+  # For gcc-6
+  - if [ "$CXX" == "g++" ]; then 
+  -   sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 1397BC53640DB551
+  -   sudo add-apt-repository --yes ppa:ubuntu-toolchain-r/test
+  - fi
+
+  # For Qt 5.7
+  - sudo add-apt-repository --yes ppa:beineri/opt-qt57-trusty
+
   - sudo add-apt-repository --yes ppa:ubuntu-sdk-team/ppa
   # - sudo add-apt-repository --yes ppa:beineri/opt-qt551-trusty
   - sudo apt-get update -qq
 install:
   # - sudo apt-get install -qq qt5-default qttools5-dev-tools
+  - sudo apt-get install -qq g++-6 qt57-meta-full
   - sudo apt-get install -qq qt5-qmake qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev libsqlite3-dev
   # - sudo apt-get install -qq qt5-dev-tools
   # - sudo apt-get -y install qt55[QTPACKAGE]
   # - if [ "$CXX" = "g++" ]; then sudo apt-get install -qq g++-4.8; fi
   # - if [ "$CXX" = "g++" ]; then export CXX="g++-4.8"; fi
 
-# before_script:
+before_script:
+  QT_ENV_SCRIPT=$(find /opt -name 'qt*-env.sh')
+  source $QT_ENV_SCRIPT
   # - cmake
 script:
-  # - $CXX --version
-  # - g++ --version
-  # - qmake -project
-  # - echo 'CONFIG += c++11' >> Qt5HelloWorld.pro
-  # - echo 'CXXFLAGS += c++11' >> Qt5HelloWorld.pro
-  # - qmake Qt5HelloWorld.pro
-  # - cat Qt5HelloWorld.pro
-  # - cat Makefile
-  # - make
-  - qmake -qt=qt5 -v
-  - qmake -qt=qt5
+  - $CXX --version
+  - g++ --version
+  - qmake -project
+  - echo 'CONFIG += c++11' >> Qt5HelloWorld.pro
+  - echo 'CXXFLAGS += c++11' >> Qt5HelloWorld.pro
+  - qmake Qt5HelloWorld.pro
+  - cat Qt5HelloWorld.pro
+  - cat Makefile
   - make
+  # - qmake -qt=qt5 -v
+  # - qmake -qt=qt5
+  # - make
