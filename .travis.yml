@@ -10,8 +10,8 @@ install:
   - sudo apt-get install -qq qt5-default qttools5-dev-tools
   # - sudo apt-get install -qq qt5-dev-tools
   # - sudo apt-get -y install qt55[QTPACKAGE]
-# before_script:
-#   - cmake
+before_script:
+  - cmake
 script:
   - qmake -project
   - qmake Qt5HelloWorld.pro
