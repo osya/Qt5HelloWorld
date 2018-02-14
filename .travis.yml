@@ -15,6 +15,6 @@ script:
   - qmake -v
   - mkdir build && cd build && qmake -project "CONFIG += c++11" "QT += widgets" ..
   - qmake
-  - cat Qt5HelloWorld.pro
+  - cat build.pro
   - cat Makefile
   - make
