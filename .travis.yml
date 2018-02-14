@@ -24,10 +24,10 @@ install:
   # - if [ "$CXX" = "g++" ]; then sudo apt-get install -qq g++-4.8; fi
   # - if [ "$CXX" = "g++" ]; then export CXX="g++-4.8"; fi
 
-# before_script:
+before_script:
 #   QT_ENV_SCRIPT=$(find /opt -name 'qt*-env.sh')
 #   source $QT_ENV_SCRIPT
-  # - cmake
+  - cmake
 script:
   - $CXX --version
   - g++ --version
