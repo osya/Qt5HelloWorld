@@ -241,7 +241,6 @@ ui_*.h
 *.jsc
 *build-*
 Makefile*
-Qt5HelloWorld.pro
 
 # Qt unit tests
 target_wrapper.*
