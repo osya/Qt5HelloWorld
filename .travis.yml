@@ -29,11 +29,9 @@ install:
 script:
   - $CXX --version
   - g++ --version
-  - qmake -qt=qt5 -v
-  - qmake -qt=qt5 -project "CONFIG += c++11" "DESTDIR = build"
-
-  # - qmake -qt=qt5 Qt5HelloWorld.pro
-  - qmake -qt=qt5
+  - qmake -v
+  - qmake -project "CONFIG += c++11" "DESTDIR = build"
+  - qmake
   - cat Qt5HelloWorld.pro
   - cat Makefile
   - make
