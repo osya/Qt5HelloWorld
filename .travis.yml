@@ -2,35 +2,15 @@
 # sudo: required
 language: cpp
 before_install:
-  # For gcc-6
-  # - if [ "$CXX" == "g++" ]; then 
-  # - sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 1397BC53640DB551
-  # - sudo add-apt-repository --yes ppa:ubuntu-toolchain-r/test
-  # - fi
-
-  # For Qt 5.7
-  # - sudo add-apt-repository --yes ppa:beineri/opt-qt57-trusty
-
-  # - sudo add-apt-repository --yes ppa:ubuntu-sdk-team/ppa
-  # - sudo add-apt-repository --yes ppa:beineri/opt-qt551-trusty
   - sudo apt-get update -qq
 install:
   - sudo apt-get install -qq qt5-default qttools5-dev-tools
-  # - sudo apt-get install -qq g++-6 qt57-meta-full
-  - sudo apt-get install -qq qt5-qmake qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev libsqlite3-dev
-  # - export QMAKE=/usr/lib/x86_64-linux-gnu/qt5/bin/qmake
-  # - sudo apt-get install -qq qt5-dev-tools
-  # - sudo apt-get -y install qt55[QTPACKAGE]
-  # - if [ "$CXX" = "g++" ]; then sudo apt-get install -qq g++-4.8; fi
-  # - if [ "$CXX" = "g++" ]; then export CXX="g++-4.8"; fi
-
-# before_script:
-#   - cmake
+  - sudo apt-get install -qq qt5-qmake qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev libsqlite3-dev  
 script:
   - $CXX --version
   - g++ --version
   - qmake -v
-  - qmake -project "CONFIG += c++11" "DESTDIR = build"
+  - qmake -project "CONFIG += c++11" "DESTDIR = build" "QT += core gui widgets"
   - qmake
   - cat Qt5HelloWorld.pro
   - cat Makefile
