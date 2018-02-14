@@ -9,7 +9,7 @@ before_install:
   # - fi
 
   # For Qt 5.7
-  - sudo add-apt-repository --yes ppa:beineri/opt-qt57-trusty
+  # - sudo add-apt-repository --yes ppa:beineri/opt-qt57-trusty
 
   - sudo add-apt-repository --yes ppa:ubuntu-sdk-team/ppa
   # - sudo add-apt-repository --yes ppa:beineri/opt-qt551-trusty
