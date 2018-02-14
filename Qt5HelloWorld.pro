@@ -15,4 +15,4 @@ SOURCES += Qt5HelloWorld/main.cpp \
            Qt5HelloWorld/qt5helloworld.cpp \
            Qt5HelloWorld/GeneratedFiles/qrc_qt5helloworld.cpp
 RESOURCES += Qt5HelloWorld/qt5helloworld.qrc
-QMAKE_CXXFLAGS += -std=c++11
+CONFIG += c++14
