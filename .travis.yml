@@ -5,7 +5,7 @@ before_install:
   - sudo apt-get update -qq
 install:
   - sudo apt-get install -qq qt5-default qttools5-dev-tools
-  - sudo apt-get install -qq qt5-qmake qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev
+  # - sudo apt-get install -qq qt5-qmake qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev
 before_script:
   - QTDIR="/usr/lib/x86_64-linux-gnu/qt5"
   - PATH="$QTDIR/bin:$PATH"
