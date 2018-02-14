@@ -1,5 +1,5 @@
 # Config file for automatic testing at travis-ci.org
-sudo: required
+# sudo: required
 language: cpp
 before_install:
   # For gcc-6
