@@ -18,14 +18,15 @@ install:
   # - sudo apt-get install -qq qt5-default qttools5-dev-tools
   # - sudo apt-get install -qq g++-6 qt57-meta-full
   - sudo apt-get install -qq qt5-qmake qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev libsqlite3-dev
+  - export QMAKE=/usr/lib/x86_64-linux-gnu/qt5/bin/qmake
   # - sudo apt-get install -qq qt5-dev-tools
   # - sudo apt-get -y install qt55[QTPACKAGE]
   # - if [ "$CXX" = "g++" ]; then sudo apt-get install -qq g++-4.8; fi
   # - if [ "$CXX" = "g++" ]; then export CXX="g++-4.8"; fi
 
-before_script:
-  QT_ENV_SCRIPT=$(find /opt -name 'qt*-env.sh')
-  source $QT_ENV_SCRIPT
+# before_script:
+#   QT_ENV_SCRIPT=$(find /opt -name 'qt*-env.sh')
+#   source $QT_ENV_SCRIPT
   # - cmake
 script:
   - $CXX --version
